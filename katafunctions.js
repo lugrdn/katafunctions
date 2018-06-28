@@ -1,5 +1,5 @@
 function KAdd(x,y) {
-    //console.log(x+y);
+    console.log(x+y);
     return x+y;
 }
 function KMultiply(x,y) {
@@ -8,7 +8,7 @@ function KMultiply(x,y) {
     for (var i=1; i<y; i++) {
         z = KAdd(z,x);
     }
-    //console.log(z);
+    console.log(z);
     return z;
 }
 function KPower(x,y) {
@@ -17,10 +17,10 @@ function KPower(x,y) {
     for (var i=1; i<y; i++) {
         z = KMultiply(z,x);
     }
-    //console.log(z);
+    console.log(z);
     return z;
 }
-function KFactorial(x) {
+/*function KFactorial(x) {
     for (var i = 1; i<x+3; i++) {
         z = KMultiply(x,i);
     }
@@ -50,7 +50,7 @@ function KFactorial3(x) {
     }
     console.log(y);
     return y;
-}
+}*/
 
 function KFactorial4(x) {
     let y;
@@ -65,12 +65,8 @@ function KFibonacci(input) {
     let old = 0;
     let last = 1;
     let next;
-    for (var i=0; i<=input; i++) {
-        console.log('iteration: ' + i);
-        console.log('old: ' + old);
-        console.log('last: ' + last);
-        console.log('next: ' + next);
-        next = old + last;
+    for (var i=2; i<input; i++) {
+        next = KAdd(old,last);
         old = last;
         last = next;
     }
